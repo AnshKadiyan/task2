@@ -23,3 +23,39 @@ PayPal Security Team
 © 2025 PayPal Inc.
 
 Attachment: Account_Verification_Form.html
+
+
+
+
+
+## headers:
+
+Return-Path: <no-reply@secure-paypa1.com>
+Received: from mail.secure-paypa1.com (unknown [45.77.12.34])
+    by mx1.example.com (Postfix) with ESMTP id 3A1F92B;
+    Wed, 10 Dec 2025 12:30:00 +05:30 (IST)
+Received: from [192.168.0.10] (helo=localhost)
+    by mail.secure-paypa1.com with smtp (Exim 4.94)
+    id 1hF8oX-0004Qw-8b; Wed, 10 Dec 2025 07:00:58 +00:00
+Received-SPF: fail (mx1.example.com: domain of secure-paypa1.com does not designate 45.77.12.34 as permitted sender) client-ip=45.77.12.34; envelope-from=no-reply@secure-paypa1.com; helo=mail.secure-paypa1.com
+Authentication-Results: mx1.example.com;
+    spf=fail (client-ip=45.77.12.34) smtp.mailfrom=secure-paypa1.com;
+    dkim=permerror (signature verification failed) header.d=secure-paypa1.com;
+    dmarc=fail (p=reject disallowed) header.from=paypal.com
+Received: from mx1.example.com (mx1.example.com [203.0.113.45])
+    by mx.google.com with ESMTPS id h7si123456qkj.22.2025.12.10.12.30.01
+    for <you@example.com>
+    (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+    Wed, 10 Dec 2025 12:30:01 +05:30 (IST)
+Date: Wed, 10 Dec 2025 12:29:58 +05:30
+From: "Account Security Team" <no-reply@secure-paypa1.com>
+Reply-To: support@secure-paypa1.com
+To: you@example.com
+Subject: URGENT: Your PayPal Account Has Been Limited
+Message-ID: <20251210.1hF8oX.mail@secure-paypa1.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_Part_12345_67890"
+Content-Transfer-Encoding: 7bit
+X-Mailer: PHPMailer 6.8 (https://github.com/PHPMailer/PHPMailer)
+X-Originating-IP: [45.77.12.34]
+
