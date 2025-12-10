@@ -1,8 +1,44 @@
-## 1. Obtain a sample phishing email (many free samples online).
-## 2. Examine sender's email address for spoofing.
-## 3. Check email headers for discrepancies (using online header analyzer).
-## 4. Identify suspicious links or attachments.
-## 5. Look for urgent or threatening language in the email body.
-## 6. Note any mismatched URLs (hover to see real link).
-## 7. Verify presence of spelling or grammar errors.
-## 8. Summarize phishing traits found in the email.
+1. Obtain a sample phishing email (many free samples online).
+  -> generated from chatgpt
+  -> attached in another file with name "sample phishing email"
+
+
+2. Examine sender's email address for spoofing.
+  -> it uses "secure-paypa1.com" where '1' is used to make it look like 'l', as a common spoofing technique
+
+
+3. Check email headers for discrepancies (using online header analyzer).
+  -> Sender domain mismatch: From uses secure-paypa1.com (note the 1), while the email claims to be PayPal — domain is not PayPal’s official domain.
+  -> Reply-To differs: Reply-To: support@secure-paypa1.com (same fake domain) — attacker can capture replies.
+  -> SPF failed: Received-SPF: fail — the sending IP (45.77.12.34) is not authorized by secure-paypa1.com DNS → suspicious.
+  -> Received chain oddities: first Received shows a non-public host IP (45.77.12.34) and an internal hop from 192.168.0.10 — common in forged/relayed phishing.
+
+
+4. Identify suspicious links or attachments.
+  -> https://paypal.com.verify-secure-login.help/reset is the link provided which can induce suspicion
+  -> Generic greeting (“Hello Customer”) → not personalized.
+  -> HTML attachment also present which can be dangerous.
+
+
+5. Look for urgent or threatening language in the email body.
+  -> used "URGENT: Your PayPal Account Has Been Limited", it uses urgent to create physchological pressure
+
+
+6. Note any mismatched URLs (hover to see real link).
+  -> this link: 👉 https://paypal.com.verify-secure-login.help/reset
+    goes to verify-secure-login.help -> fake domain.
+
+
+7. Verify presence of spelling or grammar errors.
+  -> Missing comma in the sentence.
+  -> Awkward, unnatural phrasing typical of phishing emails.
+
+
+8. Summarize phishing traits found in the email.
+  -> Sender domain is spoofed (secure-paypa1.com) where attackers replaced 'l' with '1'.
+  -> Link provided (paypal.com.verify-secure-login.help/reset) leads to a fake domain designed to look legitimate.
+  -> Uses urgent and threatening language ("URGENT: Your PayPal Account Has Been Limited") to create psychological pressure.
+  -> Generic greeting ("Hello Customer") instead of personalized name.
+  -> HTML attachment present, which can be dangerous and often used to steal credentials.
+  -> Email headers show SPF fail, domain mismatch, and suspicious internal hops — common indicators of forged emails.
+  -> Grammar and writing issues present, including missing comma and unnatural phrasing.
